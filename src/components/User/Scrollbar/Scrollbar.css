@@ -1,0 +1,5 @@
+.scrollbar{
+    width: 100%;
+    padding: 80px;
+    background-color: var(--voilet3);
+}

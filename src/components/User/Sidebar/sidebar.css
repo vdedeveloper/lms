@@ -1,0 +1,79 @@
+.sidebar {
+    width: 15%;
+    height: 100vh;
+    color: var(--white);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 94px;
+    background-image: url('/sidebar-bg.png');
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 25px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-item.active,
+.menu-item:hover {
+    background-color: var(--hover-violet);
+    color: var(--white);
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: var(--white);
+    transition: background-color 0.3s;
+    margin-left: -10px;
+}
+
+.icon img{
+    height: 30px;
+    width: 30px;
+}
+
+.menu-item.active .icon,
+.menu-item:hover .icon {
+    color: var(--hover-violet);
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--voilet1);
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.logout:hover {
+    opacity: 0.8;
+}

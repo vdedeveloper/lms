@@ -1,0 +1,100 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: var(--white);
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo .logo1{
+    width: 40px;
+}
+
+.logo .logo2{
+    width: 130px;
+    margin-left: 10px;
+}
+
+.left-side-header{
+    background: var(--white);
+    width: 15%;
+    padding: 10px 20px;
+}
+
+.right-side-header{
+    background: var(--voilet2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    padding: 15px 50px;
+}
+
+.mid-header-section, .right-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.mid-header-section .main-box{
+    background-color: var(--white);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.right-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.mid-header-section h2{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.right-menu h3{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--voilet1);
+}
+
+.search, .communication, .announcement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.username{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.portal{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--voilet1);
+    line-height: 35px;
+}
