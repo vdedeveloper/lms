@@ -3,7 +3,7 @@ import Sidebar from './Sidebar/sidebar'
 import Scrollbar from './Scrollbar/Scrollbar'
 import UserContent from './UserContent/UserContent'
 
-function App() {
+function User() {
   return (
     <>
       <Header />
@@ -14,4 +14,4 @@ function App() {
   )
 }
 
-export default App
+export default User

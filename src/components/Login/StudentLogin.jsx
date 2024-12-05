@@ -4,17 +4,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../lib/actions";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import './Login.css'
+import './Login.css';
 
-function Login() {
+function StudentLogin() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { error, user } = useSelector((state) => state.data);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const email = e.target.elements["login-id"].value;
-    const password = e.target.elements["login-password"].value;
+    const email = e.target.elements["login-id"].value.trim();
+    const password = e.target.elements["login-password"].value.trim();
+
+    if (!email || !password) {
+      toast.error("Both fields are required!");
+      return;
+    }
     dispatch(login(email, password));
   };
 
@@ -92,4 +97,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default StudentLogin;
