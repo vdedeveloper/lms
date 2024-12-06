@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
-import './UserContent.css';
+import './AddLearner.css';
 
-const UserContent = () => {
+const AddLearner = () => {
     const [showPopup, setShowPopup] = useState(false);
 
     const handleAddClick = () => {
@@ -116,4 +116,4 @@ const UserContent = () => {
     );
 };
 
-export default UserContent;
+export default AddLearner;
