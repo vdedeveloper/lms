@@ -24,7 +24,7 @@
     align-items: center;
     position: relative;
     gap: 25px;
-    padding: 10px;
+    padding: 11px;
     font-size: 16px;
     font-weight: 500;
     color: var(--white);
@@ -32,10 +32,24 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-.menu-item.active,
+.menu-item.active {
+    background-color: #670AC4; /* Active background color */
+    color: #fff; /* Active text color */
+}
+
+.menu-item.active .link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-item .link {
+    text-decoration: none;
+    color: inherit;
+    flex-grow: 1;
+}
+
 .menu-item:hover {
     background-color: var(--hover-violet);
-    color: var(--white);
 }
 
 .icon {
