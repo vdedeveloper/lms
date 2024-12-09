@@ -99,11 +99,6 @@ const AddTrainer = () => {
                                 <label>Mobile *</label>
                                 <input type='tel' placeholder='+91' required />
                             </div>
-                            <div className='form-group'>
-                                <label>
-                                    <input type='checkbox' /> Send email to user
-                                </label>
-                            </div>
                             <div className='form-actions'>
                                 <button type='button' onClick={handleClosePopup}>Cancel</button>
                                 <button type='submit'>Add</button>
