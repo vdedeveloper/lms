@@ -1,15 +1,15 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faEnvelope, faBell } from '@fortawesome/free-solid-svg-icons';
-import './header.css'
+import './header.css';
 
 const Header = () => {
     return (
         <header>
             <div className='main-header'>
                 <div className='logo left-side-header'>
-                    <img className='logo1' src='./favicon.png' alt='favicon'></img>
-                    <img className='logo2' src='./vdei-logo.png' alt='vdei-logo'></img>
+                    <img className='logo1' src='/favicon.png' alt='favicon' />
+                    <img className='logo2' src='/vdei-logo.png' alt='vdei-logo' />
                 </div>
                 <div className='right-side-header'>
                     <div className='mid-header-section'>
@@ -34,7 +34,7 @@ const Header = () => {
                         </div>
                         <div className='profile'>
                             <div className='profile-img'>
-                                <img src='/profile-img.jpg' alt='profile-img'></img>
+                                <img src='/profile-img.jpg' alt='profile-img' />
                             </div>
                             <div className='profile-content'>
                                 <h1 className='username'>Jagriti Mishra</h1>
@@ -46,6 +46,6 @@ const Header = () => {
             </div>
         </header>
     );
-}
+};
 
 export default Header;

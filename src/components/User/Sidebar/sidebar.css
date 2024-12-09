@@ -51,14 +51,9 @@
     margin-left: -10px;
 }
 
-.icon img{
+.icon img {
     height: 30px;
     width: 30px;
-}
-
-.menu-item.active .icon,
-.menu-item:hover .icon {
-    color: var(--hover-violet);
 }
 
 .logout {
@@ -76,4 +71,31 @@
 
 .logout:hover {
     opacity: 0.8;
+}
+
+.arrow-icon {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--voilet2);
+}
+
+.dropdown {
+    background-color: var(--hover-violet);
+    margin-top: -10px;
+}
+
+.dropdown-item {
+    gap: 25px;
+    padding: 10px 35px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+}
+
+.dropdown-item:hover {
+    background-color: var(--voilet3);
 }

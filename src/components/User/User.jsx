@@ -6,7 +6,7 @@ import AddLearner from './AddLearner/AddLearner';
 import AddTrainer from './AddTrainer/AddTrainer';
 import { useState } from 'react';
 
-function user() {
+function User() {
   const [selectedComponent, setSelectedComponent] = useState('AddAdmin');
 
   return (
@@ -14,8 +14,6 @@ function user() {
       <Header />
       <Sidebar onSelect={(component) => setSelectedComponent(component)} />
       <Scrollbar />
-
-      {/* Dynamic Component Rendering */}
       {selectedComponent === 'AddAdmin' && <AddAdmin />}
       {selectedComponent === 'AddLearner' && <AddLearner />}
       {selectedComponent === 'AddTrainer' && <AddTrainer />}
@@ -23,4 +21,4 @@ function user() {
   );
 }
 
-export default user;
+export default User;
