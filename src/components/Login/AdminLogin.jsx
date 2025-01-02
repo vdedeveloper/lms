@@ -25,7 +25,7 @@ const AdminLogin = () => {
   useEffect(() => {
     if (user) {
       toast.success("Admin logged in successfully!");
-      navigate("/admin-dashboard"); // Redirect to admin dashboard
+      navigate("/admin-dashboard"); 
     }
     if (error) {
       toast.error(error);

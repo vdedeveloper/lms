@@ -1,0 +1,196 @@
+.batch-page-btn {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.fees-structure {
+    margin: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.fees-structure-card {
+    width: 60%;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.student-id h2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--grey);
+    margin-bottom: 20px;
+}
+
+.student-id span {
+    width: 50px;
+    height: 50px;
+    color: var(--white);
+    font-weight: 600;
+    background: rgb(188, 164, 255);
+    background: linear-gradient(180deg, rgba(188, 164, 255, 1) 0%, rgb(121, 73, 253) 100%);
+    padding: 5px 10px;
+    border-radius: 50px;
+    line-height: 0px;
+}
+
+.student-profile {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.student-profile-img img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+}
+
+.student-profile-detail {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.student-profile-detail h2 {
+    font-size: 27px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.student-profile-detail h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--voilet1);
+}
+
+.student-profile-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+    flex-direction: row;
+}
+
+.student-profile-title,
+.student-fees-title,
+.batch-enrolled-students,
+.student-profile-start-date,
+.student-profile-end-date,
+.student-profile-class-time,
+.course-heading,
+.fees,
+.enrolled-students,
+.student-profile-date,
+.student-payment-mode {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.course-heading img,
+.student-fees-title img,
+.enrolled-students img,
+.student-profile-date img {
+    width: 20px;
+    height: 20px;
+}
+
+.course-heading h2,
+.student-fees-status-content h2,
+.student-fees-title h2,
+.enrolled-students h2,
+.student-profile-date h2 {
+    font-size: 18px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.student-profile-heading-content h2,
+.student-fees-content h2,
+.student-profile-start-date-content h2,
+.student-profile-end-date-content h2,
+.student-profile-class-time-content h2,
+.student-payment-mode-content h2 {
+    font-size: 15px;
+    color: var(--grey);
+    font-weight: 500;
+    margin-top: 13px;
+}
+
+.student-profile-fee-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.student-fees-status-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.student-fees-status-content img {
+    width: 20px;
+    height: 20px;
+}
+
+.student-fee-status {
+    flex-grow: 1;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
+}
+
+/* Responsiveness */
+
+@media (max-width:1400px) {
+    .fees-structure-card {
+        width: 65%;
+    }
+
+    .course-heading h2,
+    .student-fees-status-content h2,
+    .student-fees-title h2,
+    .enrolled-students h2,
+    .student-profile-date h2 {
+        font-size: 15px;
+    }
+
+    .student-profile-heading-content h2,
+    .student-fees-content h2,
+    .student-profile-start-date-content h2,
+    .student-profile-end-date-content h2,
+    .student-profile-class-time-content h2,
+    .student-payment-mode-content h2 {
+        font-size: 13px;
+    }
+}

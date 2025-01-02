@@ -1,5 +1,11 @@
 .scrollbar{
     width: 100%;
-    padding: 75px;
+    padding: 73px;
     background-color: var(--voilet3);
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .scrollbar{
+        padding: 70px;
+    }
 }

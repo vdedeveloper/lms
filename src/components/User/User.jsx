@@ -1,9 +1,6 @@
-import Header from '../Header/Header';
-import Sidebar from '../Sidebar/sidebar';
-import Scrollbar from '../Scrollbar/Scrollbar';
-import AddAdmin from './AddAdmin/AddAdmin';
-import AddLearner from './AddLearner/AddLearner';
-import AddTrainer from './AddTrainer/AddTrainer';
+import AddAdmin from './AddAdmin';
+import AddLearner from './AddLearner';
+import AddTrainer from './AddTrainer';
 import { useState } from 'react';
 
 function User() {
@@ -11,9 +8,6 @@ function User() {
 
   return (
     <>
-      <Header />
-      <Sidebar onSelect={(component) => setSelectedComponent(component)} />
-      <Scrollbar />
       {selectedComponent === 'AddAdmin' && <AddAdmin />}
       {selectedComponent === 'AddLearner' && <AddLearner />}
       {selectedComponent === 'AddTrainer' && <AddTrainer />}

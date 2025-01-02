@@ -26,7 +26,7 @@ function StudentLogin() {
   useEffect(() => {
     if (user) {
       toast.success("Logged in successfully!");
-      navigate("/user"); // Redirect to user page upon successful login
+      navigate("/user"); 
     }
     if (error) {
       toast.error(error);

@@ -1,0 +1,159 @@
+/* Admin Dashboard */
+
+@media (max-width: 1400px) {
+
+    .course-counter-card,
+    .batches-counter-card,
+    .students-counter-card,
+    .trainers-counter-card {
+        height: 150px;
+    }
+
+    .counter-card-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .counter-card-heading h2 {
+        font-size: 25px;
+    }
+
+    .counter-card-heading h3 {
+        font-size: 15px;
+    }
+
+    .counter-course-navigate-content button,
+    .counter-batch-navigate-content button,
+    .counter-students-navigate-content button,
+    .counter-trainer-navigate-content button {
+        font-size: 15px;
+    }
+
+    .total-batch-card-content {
+        gap: 40px;
+        padding: 25px;
+        width: 100%;
+    }
+
+    .batch-number-counter {
+        width: 30px;
+        height: 30px;
+    }
+
+    .batch-course-name h2 {
+        font-size: 18px;
+    }
+
+    .batch-course-name h3 {
+        font-size: 15px;
+    }
+}
+
+/* Trainer Dashboard */
+
+@media (max-width:1400px) {
+    .trainer-batches {
+        gap: 30px;
+    }
+
+    .running-batch-detail .course-heading img,
+    .running-batch-detail .enrolled-students img,
+    .running-batch-detail .start-date img,
+    .running-batch-detail .end-date img,
+    .running-batch-detail .class-time img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .running-batch-detail .course-heading h2,
+    .running-batch-detail .enrolled-students h2,
+    .running-batch-detail .start-date h2,
+    .running-batch-detail .end-date h2,
+    .running-batch-detail .class-time h2 {
+        font-size: 13px;
+    }
+
+    .running-batch-detail .course-heading-content h2,
+    .running-batch-detail .enrolled-students-content h2,
+    .running-batch-detail .start-date-content h2,
+    .running-batch-detail .end-date-content h2,
+    .running-batch-detail .class-time-content h2 {
+        font-size: 11px;
+        margin-top: 10px;
+    }
+
+    .trainer-dashboard .user-add-btn button {
+        font-size: 12px;
+    }
+}
+
+/* Learner Dashboard */
+
+@media (max-width:1400px) {
+    .learner-dashboard-top {
+        gap: 20px;
+    }
+
+    .learner-main-heading h2 {
+        font-size: 20px;
+    }
+
+    .learner-dashboard .course-counter-card,
+    .learner-dashboard .batches-counter-card,
+    .learner-dashboard .students-counter-card,
+    .learner-dashboard .trainers-counter-card {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+    }
+
+    .learner-dashboard .counter-card-heading h2 {
+        font-size: 20px;
+    }
+
+    .learner-dashboard .counter-card-heading h3 {
+        font-size: 13px;
+    }
+
+    .learner-dashboard .counter-card-icon img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .popular-course .courses {
+        gap: 15px;
+    }
+
+    .popular-course .course-card {
+        width: 220px;
+        min-height: 380px;
+    }
+
+    .popular-course .enrolled-learner,
+    .popular-course .course-id {
+        font-size: 10px;
+    }
+
+    .popular-course .start-date2 img,
+    .popular-course .end-date2 img,
+    .popular-course .class-time2 img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .popular-course .start-date2 h2,
+    .popular-course .end-date2 h2,
+    .popular-course .class-time2 h2 {
+        font-size: 12px;
+    }
+
+    .popular-course .start-date-content h2,
+    .popular-course .end-date-content h2,
+    .popular-course .class-time-content h2 {
+        font-size: 10px;
+    }
+
+    .enroll-course a {
+        font-size: 13px;
+    }
+}

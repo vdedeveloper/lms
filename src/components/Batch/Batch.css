@@ -1,0 +1,181 @@
+/* BatchPage CSS */
+
+.batch-page-btn {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.batches {
+    margin: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.batch-card {
+    width: 400px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.batch-number h2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--grey);
+    margin-bottom: 20px;
+}
+
+.batch-number span {
+    width: 50px;
+    height: 50px;
+    color: var(--white);
+    font-weight: 600;
+    background: rgb(188, 164, 255);
+    background: linear-gradient(180deg, rgba(188, 164, 255, 1) 0%, rgb(121, 73, 253) 100%);
+    padding: 5px 10px;
+    border-radius: 50px;
+    line-height: 0px;
+}
+
+.trainer-profile {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.trainer-profile-img img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+}
+
+.trainer-profile-detail {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trainer-profile-detail h2 {
+    font-size: 27px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.trainer-profile-detail h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--voilet1);
+}
+
+.batch-course-title,
+.batch-enrolled-students,
+.batch-start-date,
+.batch-end-date,
+.batch-class-time,
+.course-heading,
+.enrolled-students,
+.start-date,
+.end-date,
+.class-time {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.course-heading img,
+.enrolled-students img,
+.start-date img,
+.end-date img,
+.class-time img {
+    width: 20px;
+    height: 20px;
+}
+
+.course-heading h2,
+.enrolled-students h2,
+.start-date h2,
+.end-date h2,
+.class-time h2 {
+    font-size: 18px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.course-heading-content h2,
+.enrolled-students-content h2,
+.start-date-content h2,
+.end-date-content h2,
+.class-time-content h2 {
+    font-size: 15px;
+    color: var(--grey);
+    font-weight: 500;
+    margin-top: 13px;
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 1400px) {
+    .batch-number span {
+        width: 35px;
+        height: 35px;
+    }
+
+    .trainer-profile-img img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .trainer-profile-detail h2 {
+        font-size: 23px;
+    }
+
+    .trainer-profile-detail h3 {
+        font-size: 18px;
+    }
+
+    .course-heading img,
+    .enrolled-students img,
+    .start-date img,
+    .end-date img,
+    .class-time img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .course-heading h2,
+    .enrolled-students h2,
+    .start-date h2,
+    .end-date h2,
+    .class-time h2 {
+        font-size: 15px;
+    }
+
+    .course-heading-content h2,
+    .enrolled-students-content h2,
+    .start-date-content h2,
+    .end-date-content h2,
+    .class-time-content h2 {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+
+    .create-batch-content label {
+        text-align: center;
+    }
+}

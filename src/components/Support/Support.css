@@ -1,0 +1,247 @@
+/* Admin Support */
+
+/* Table Styles */
+.table-container {
+    margin-top: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0 10px; 
+    font-size: 14px;
+}
+
+thead th {
+    font-size: 22px;
+    color: var(--grey);
+    font-weight: 400;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey2);
+}
+
+tbody tr {
+    border-bottom: 1px solid #e6e6e6;
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+td {
+    padding: 12px 15px;
+    color: #333;
+}
+
+.active-row {
+    background-color: #e6dcf9;
+}
+
+/* Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background: #ffffff;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.popup-header h2 {
+    padding-left: 10px;
+    font-size: 15px;
+    color: var(--black);
+}
+
+.popup-header p {
+    padding: 5px 0 0 10px;
+    font-size: 13px;
+    color:  var(--grey);
+}
+
+.popup-left-heading{
+    border-left: 1px solid var(--grey);
+}
+
+.popup-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.close-button{
+    background: none;
+    border: none;
+    font-size: 30px;
+    font-weight: 500;
+    color: var( --voilet1);
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: var(--black);
+}
+
+.popup form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form-actions button[type="button"] {
+    background: var(--grey);
+    color: var(--white);
+}
+
+.form-actions button[type="button"]:hover {
+    background: var(--black);
+}
+
+.form-actions button[type="submit"] {
+    background: var(--voilet1);
+    color: #fff;
+}
+
+.form-actions button[type="submit"]:hover {
+    background: var(--voilet1);
+}
+
+.select-role {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.select-role input[type="radio"] {
+    margin-right: 5px;
+}
+
+
+/* Learner Support */
+
+.support-learner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.support-learner-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.support-learner-heading h2{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-voilet);
+}
+
+.support-learner-heading p{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.support-learner-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.email-support, .call-support, .whatsapp-support{
+    background-color: #eeeeee;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.email-support a, .call-support a, .whatsapp-support a{
+    text-decoration: none;
+    color: var(--voilet1);
+}

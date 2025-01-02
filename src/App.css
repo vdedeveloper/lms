@@ -1,5 +1,7 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +14,13 @@
   --grey: #3B3B3B;
   --blue: #3E92F4;
   --voilet: #993AF7;
-  --voilet1 : #670AC4;
-  --voilet2 : #DCCFFF;
-  --voilet3 : #8363DC;
-  --red : #C40A0D;
-  --hover-violet: #670AC4; 
+  --voilet1: #670AC4;
+  --voilet2: #DCCFFF;
+  --voilet3: #8363DC;
+  --red: #C40A0D;
+  --hover-violet: #670AC4;
   --grey2: #909090;
+  --text-voilet: #470A84;
 }
 
 html {
@@ -29,10 +32,70 @@ body {
   height: 100vh;
   background-color: var(--white);
   font-family: "Roboto", sans-serif;
-  /* padding: 0 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row; */
+  margin: 0;
+  padding: 0 !important;
+  overflow-x: hidden; 
 }
 
+.user-add-btn button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: linear-gradient(180deg, rgba(188, 164, 255, 1) 0%, rgb(121, 73, 253) 100%);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.user-add-btn button:hover {
+  background: var(--voilet1);
+}
+
+.main-section {
+  margin-left: 15%;
+  padding: 30px 50px;
+}
+
+.main-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.usercontent-heading {
+  line-height: 40px;
+}
+
+.usercontent-heading h3 {
+  font-size: 30px;
+  color: var(--hover-violet);
+  font-weight: 700;
+}
+
+/* Responsive Design */
+
+@media (max-width:1400px) {
+  .main-section {
+    margin-left: 15%;
+    padding: 30px;
+  }
+
+  .user-add-btn button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    padding: 0; 
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .main-section {
+    margin-left: 16%;
+  }
+}

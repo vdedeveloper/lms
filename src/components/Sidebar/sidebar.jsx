@@ -1,21 +1,31 @@
 import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import './sidebar.css';
 
 const Sidebar = ({ onSelect }) => {
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const location = useLocation(); // Get current route
+    // Users Dropdown
+    const [isUsersDropdownOpen, setIsUsersDropdownOpen] = useState(false);
+    // Assignment Dropdown
+    const [isAssignmentDropdownOpen, setIsAssignmentDropdownOpen] = useState(false);
+    // Location
+    const location = useLocation();
+    // Navigation
+    const navigate = useNavigate();
 
-    const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen);
+    // Toggle User Dropdown
+    const toggleUsersDropdown = () => {
+        setIsUsersDropdownOpen(!isUsersDropdownOpen);
     };
 
-    const openDropdown = () => {
-        setIsDropdownOpen(true);
+    // Toggle Assignment Dropdown
+    const toggleAssignmentDropdown = () => {
+        setIsAssignmentDropdownOpen(!isAssignmentDropdownOpen);
     };
 
-    const closeDropdown = () => {
-        setIsDropdownOpen(false);
+    // Dropdown Click
+    const handleDropdownClick = (route) => {
+        navigate(route);
+        onSelect(route); 
     };
 
     const isActive = (path) => location.pathname === path;
@@ -23,44 +33,60 @@ const Sidebar = ({ onSelect }) => {
     return (
         <aside className="sidebar">
             <div className="sidebar-menu">
-                {/* Dashboard */}
+                {/* Dashboards */}
+
+                {/* Admin Dashboard */}
                 <div className={`menu-item ${isActive('/admindashboard') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
                     <div className="icon">
                         <img src="/dashboard-icon.png" alt="Dashboard Icon" />
                     </div>
                     <NavLink to="/admindashboard" className="link">
-                        <span>DASHBOARD</span>
+                        <span>ADMIN DASHBOARD</span>
                     </NavLink>
                 </div>
 
-                {/* Users */}
+                {/* Learner Dashboard */}
+                {/* <div className={`menu-item ${isActive('/learnerdashboard') ? 'active' : ''}`}>
+                    <div className="icon-strip"></div>
+                    <div className="icon">
+                        <img src="/dashboard-icon.png" alt="Dashboard Icon" />
+                    </div>
+                    <NavLink to="/learnerdashboard" className="link">
+                        <span>DASHBOARD</span>
+                    </NavLink>
+                </div> */}
+
+                {/* Trainer Dashboard */}
+                {/* <div className={`menu-item ${isActive('/trainerdashboard') ? 'active' : ''}`}>
+                    <div className="icon-strip"></div>
+                    <div className="icon">
+                        <img src="/dashboard-icon.png" alt="Dashboard Icon" />
+                    </div>
+                    <NavLink to="/trainerdashboard" className="link">
+                        <span>TRAINER DASHBOARD</span>
+                    </NavLink>
+                </div> */}
+
+                {/* Users (Admin) */}
                 <div
                     className={`menu-item ${isActive('/user') ? 'active' : ''}`}
-                    onClick={toggleDropdown}
-                    onMouseEnter={openDropdown}
-                    onMouseLeave={closeDropdown}
+                    onClick={toggleUsersDropdown}
                 >
                     <div className="icon-strip"></div>
                     <div className="icon">
                         <img src="/users-icon.png" alt="Users Icon" />
                     </div>
                     <NavLink to="/user" className="link">
-                        <span>USERS</span>
+                        USERS
                     </NavLink>
-                    <span className="arrow-icon">{isDropdownOpen ? '▲' : '▼'}</span>
+                    <span className="arrow-icon">{isUsersDropdownOpen ? '▲' : '▼'}</span>
                 </div>
-
-                {/* Dropdown */}
-                {isDropdownOpen && (
-                    <div
-                        className="dropdown"
-                        onMouseEnter={openDropdown}
-                        onMouseLeave={closeDropdown}
-                    >
+                {isUsersDropdownOpen && (
+                    <div className="dropdown">
                         <div
                             className="dropdown-item"
-                            onClick={() => onSelect('AddAdmin')}
+                            onClick={() => handleDropdownClick('/addadmin')}
                         >
                             <div className="icon">
                                 <img src="/admin-user.png" alt="Admin Icon" />
@@ -69,7 +95,7 @@ const Sidebar = ({ onSelect }) => {
                         </div>
                         <div
                             className="dropdown-item"
-                            onClick={() => onSelect('AddLearner')}
+                            onClick={() => handleDropdownClick('/addlearner')}
                         >
                             <div className="icon">
                                 <img src="/learner-user.png" alt="Learner Icon" />
@@ -78,7 +104,7 @@ const Sidebar = ({ onSelect }) => {
                         </div>
                         <div
                             className="dropdown-item"
-                            onClick={() => onSelect('AddTrainer')}
+                            onClick={() => handleDropdownClick('/addtrainer')}
                         >
                             <div className="icon">
                                 <img src="/trainer-user.png" alt="Trainer Icon" />
@@ -88,52 +114,127 @@ const Sidebar = ({ onSelect }) => {
                     </div>
                 )}
 
-                {/* My Courses */}
-                <div className={`menu-item ${isActive('/course') ? 'active' : ''}`}>
+                {/* Batches */}
+                {/* Batches (admin) */}
+                <div className={`menu-item ${isActive('/batch') ? 'active' : ''}`}>
+                    <div className="icon-strip"></div>
+                    <div className="icon">
+                        <img src="/batches-icon.png" alt="Course Icon" />
+                    </div>
+                    <NavLink to="/batch" className="link">
+                        <span>BATCHES</span>
+                    </NavLink>
+                </div>
+
+                {/* Batches (Learner) */}
+                {/* <div className={`menu-item ${isActive('/batch-page-learner') ? 'active' : ''}`}>
+                    <div className="icon-strip"></div>
+                    <div className="icon">
+                        <img src="/batches-icon.png" alt="Course Icon" />
+                    </div>
+                    <NavLink to="/batch-page-learner" className="link">
+                        <span>BATCHES</span>
+                    </NavLink>
+                </div> */}
+
+                {/* Batches (Trainer) */}
+                {/* <div className={`menu-item ${isActive('/batch-page-trainer') ? 'active' : ''}`}>
+                    <div className="icon-strip"></div>
+                    <div className="icon">
+                        <img src="/batches-icon.png" alt="Course Icon" />
+                    </div>
+                    <NavLink to="/batch-page-trainer" className="link">
+                        <span>BATCHES</span>
+                    </NavLink>
+                </div> */}
+
+                {/* Courses (learner) */}
+                {/* <div className={`menu-item ${isActive('/course') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
                     <div className="icon">
                         <img src="/course-icon.png" alt="Course Icon" />
                     </div>
                     <NavLink to="/course" className="link">
-                        <span>MY COURSES</span>
+                        <span>COURSE</span>
                     </NavLink>
-                </div>
+                </div> */}
 
-                {/* Session Videos */}
-                <div className={`menu-item ${isActive('/sessionvideo') ? 'active' : ''}`}>
+                {/* Session Video (Trainer, learner) */}
+                {/* <div className={`menu-item ${isActive('/sessionvideo') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
                     <div className="icon">
-                        <img src="/video-icon.png" alt="Video Icon" />
+                        <img src="/video-icon.png" alt="Material Icon" />
                     </div>
                     <NavLink to="/sessionvideo" className="link">
-                        <span>SESSION VIDEOS</span>
+                        <span>SESSION VIDEO</span>
                     </NavLink>
-                </div>
+                </div> */}
 
-                {/* Materials */}
+                {/* Study Materials */}
+
+                {/* Materials (Admin, Trainer) */}
                 <div className={`menu-item ${isActive('/materials') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
                     <div className="icon">
                         <img src="/material-icon.png" alt="Material Icon" />
                     </div>
                     <NavLink to="/materials" className="link">
-                        <span>MATERIALS</span>
+                        <span>STUDY MATERIALS</span>
                     </NavLink>
                 </div>
 
-                {/* Submissions */}
-                <div className={`menu-item ${isActive('/submissions') ? 'active' : ''}`}>
+                {/* Materials (Learner) */}
+                {/* <div className={`menu-item ${isActive('/materials-learner') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
                     <div className="icon">
-                        <img src="/submission-icon.png" alt="Submission Icon" />
+                        <img src="/material-icon.png" alt="Material Icon" />
                     </div>
-                    <NavLink to="/submissions" className="link">
-                        <span>SUBMISSIONS</span>
+                    <NavLink to="/materials-learner" className="link">
+                        <span>STUDY MATERIALS</span>
                     </NavLink>
-                </div>
+                </div> */}
 
-                {/* Fee Structure */}
-                <div className={`menu-item ${isActive('/feestructure') ? 'active' : ''}`}>
+                {/* Assignment (Learner, Trainer) */}
+
+                {/* <div
+                    className={`menu-item ${isActive('/assignment') ? 'active' : ''}`}
+                    onClick={toggleAssignmentDropdown}
+                >
+                    <div className="icon-strip"></div>
+                    <div className="icon">
+                        <img src="/submission-icon.png" alt="Users Icon" />
+                    </div>
+                    <NavLink to="/assignment" className="link">
+                        ASSIGNMENT
+                    </NavLink>
+                    <span className="arrow-icon">{isAssignmentDropdownOpen ? '▲' : '▼'}</span>
+                </div> */}
+                {/* {isAssignmentDropdownOpen && (
+                    <div className="dropdown">
+                        <div
+                            className="dropdown-item"
+                            onClick={() => handleDropdownClick('/trainer-assignment')}
+                        >
+                            <div className="icon">
+                                <img src="/assignment-submit.png" alt="Admin Icon" />
+                            </div>
+                            ASSIGNMENTS
+                        </div>
+                        <div
+                            className="dropdown-item"
+                            onClick={() => handleDropdownClick('/trainer-project')}
+                        >
+                            <div className="icon">
+                                <img src="/project-submit.png" alt="Admin Icon" />
+                            </div>
+                            PROJECTS
+                        </div>
+                    </div>
+                )} */}
+
+
+                {/* Fee Structure (Learner) */}
+                {/* <div className={`menu-item ${isActive('/feestructure') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
                     <div className="icon">
                         <img src="/fee-icon.png" alt="Fee Icon" />
@@ -141,18 +242,29 @@ const Sidebar = ({ onSelect }) => {
                     <NavLink to="/feestructure" className="link">
                         <span>FEE STRUCTURE</span>
                     </NavLink>
-                </div>
+                </div> */}
 
-                {/* Support */}
+                {/* Support (admin) */}
                 <div className={`menu-item ${isActive('/support') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
                     <div className="icon">
                         <img src="/support-icon.png" alt="Support Icon" />
                     </div>
                     <NavLink to="/support" className="link">
-                        <span>SUPPORT</span>
+                        <span>ISSUES</span>
                     </NavLink>
                 </div>
+
+                {/* Support (Learner, Trainer) */}
+                {/* <div className={`menu-item ${isActive('/support-learner') ? 'active' : ''}`}>
+                    <div className="icon-strip"></div>
+                    <div className="icon">
+                        <img src="/support-icon.png" alt="Support Icon" />
+                    </div>
+                    <NavLink to="/support-learner" className="link">
+                        <span>SUPPORT</span>
+                    </NavLink>
+                </div> */}
             </div>
 
             {/* Logout */}

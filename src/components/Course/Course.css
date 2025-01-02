@@ -1,0 +1,638 @@
+.usercontent-heading h3 {
+    font-size: 24px;
+    color: var(--text-voilet);
+}
+
+.usercontent-heading p {
+    font-size: 14px;
+    color: #6b6b6b;
+}
+
+.courses {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.course-card {
+    width: 350px;
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.course-card-img {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.course-card-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+.course-title h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-voilet);
+    margin-bottom: 5px;
+    margin-top: -10px;
+}
+
+.course-title span {
+    color: var(--voilet1);
+}
+
+.course-trainer-name h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #685E5E;
+    margin-top: 5px;
+}
+
+.course-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.enrolled-learner,
+.course-id {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.enrolled-learner span,
+.course-id span {
+    color: var(--voilet1);
+}
+
+.course-start-date,
+.course-end-date,
+.course-class-time,
+.class-time2,
+.start-date2,
+.end-date2 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.start-date2 img,
+.end-date2 img,
+.class-time2 img {
+    width: 20px;
+    height: 20px;
+}
+
+.start-date2 h2,
+.end-date2 h2,
+.class-time2 h2 {
+    font-size: 15px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.start-date-content h2,
+.end-date-content h2,
+.class-time-content h2 {
+    font-size: 14px;
+    color: var(--grey);
+    font-weight: 500;
+    margin-top: 13px;
+}
+
+.create-course-start-date,
+.create-course-end-date,
+.create-course-class-time {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+/* CreateCourse Page1 CSS */
+
+/* course form */
+.create-batch-content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 40px;
+    margin-top: 30px;
+}
+
+.course-title,
+.course-trainer,
+.total-price,
+.discounted-price,
+.course-availability {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.course-pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.total-price,
+.discounted-price {
+    flex: 1;
+}
+
+.create-course-content {
+    margin-top: 30px;
+}
+
+.create-course-content label {
+    font-size: 20px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.create-course-content input {
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #c3c1c1;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.create-course-content :placeholder-shown {
+    color: #cbc8c8;
+}
+
+.create-course-content input:hover {
+    border-color: var(--hover-violet);
+}
+
+.create-course-content input:focus,
+.create-course-content input:active {
+    border-color: var(--hover-violet);
+    outline: none;
+}
+
+.course-submit-btn {
+    background: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* CreateBatch Page1 CSS */
+
+/* batch form */
+.create-batch-content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 40px;
+    margin-top: 30px;
+}
+
+.create-batch-number,
+.create-batch-trainer-name,
+.create-batch-trainer-role,
+.course-category,
+.create-batch-start-date,
+.create-batch-end-date,
+.create-batch-class-time {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.create-batch-number {
+    flex: 1;
+}
+
+.create-batch-content label {
+    font-size: 20px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.create-batch-content input,
+.create-batch-trainer-role select {
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #c3c1c1;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.create-batch-content :placeholder-shown {
+    color: #cbc8c8;
+}
+
+.create-batch-trainer-role :placeholder-shown {
+    color: #cbc8c8;
+}
+
+.create-batch-content input:hover,
+.create-batch-trainer-role select:hover {
+    border-color: var(--hover-violet);
+}
+
+.create-batch-content input:focus,
+.create-batch-trainer-role select:focus,
+.create-batch-content input:active,
+.create-batch-trainer-role select:active {
+    border-color: var(--hover-violet);
+    outline: none;
+}
+
+.course-submit-btn {
+    background: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.student-select-option input[type="radio"] {
+    margin: 20px 0;
+}
+
+.student-selection {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.student-selection h2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-voilet);
+}
+
+.batch-dates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 80px;
+}
+
+/* CreateCourse Page2 CSS */
+
+/* addcoursemanually */
+.addcoursemanually {
+    margin: 30px 0;
+}
+
+.addchapter {
+    padding: 30px;
+    background-color: #f1f0f0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.addchapter-content h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: var(--black);
+}
+
+.addchapter-content p {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.addchapter-btn button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgb(218, 217, 219);
+    background: linear-gradient(180deg, rgb(184, 184, 185) 0%, rgb(108, 108, 109) 100%);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.addchapter-btn button:hover {
+    background: rgb(108, 108, 109);
+}
+
+.start-class-btn button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgb(188, 164, 255);
+    background: linear-gradient(180deg, rgba(188, 164, 255, 1) 0%, rgb(121, 73, 253) 100%);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.start-class-btn button:hover {
+    background: var(--voilet1);
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: var(--white);
+    padding: 30px 40px;
+    overflow-y: auto;
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.popup-content .close-icon {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-options {
+    width: 80%;
+}
+
+.popup-options h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text-voilet);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.upload-content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.upload-content label {
+    font-size: 15px;
+    color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    line-height: 20px;
+}
+
+.upload-content input {
+    margin-top: 5px;
+}
+
+/* addcoverimage */
+.add-cover-image,
+.add-profile-image,
+.add-cover-files,
+.add-cover-image label,
+.add-profile-image label,
+.add-cover-files label {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #c9c5c5;
+    border-radius: 10px;
+    margin: 30px 0;
+    cursor: pointer;
+}
+
+/* course-availablity */
+.availability-options label,
+.student-select-option label,
+.available-from label,
+.available-to label {
+    font-size: 18px;
+    color: var(--black);
+    font-weight: 400;
+}
+
+.availability-options input {
+    margin: 10px;
+}
+
+.course-availability h2 {
+    font-size: 22px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.availability-options,
+.student-select-option {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.time-based-options {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.time-based-options div {
+    width: 100%;
+}
+
+.time-based-options label {
+    display: block;
+    color: var(--text-voilet);
+}
+
+.available-from,
+.available-to {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.available-from input,
+.available-to input {
+    padding: 10px;
+    width: 50%;
+}
+
+.pdf-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.pdf-popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* nested popup */
+
+.nested-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nested-popup-content {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.nested-popup-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nested-popup-heading .close-icon {
+    margin-top: -40px;
+}
+
+.nested-popup-heading h2 {
+    font-size: 20px;
+    color: var(--text-voilet);
+    font-weight: 600;
+}
+
+.nested-popup-content input {
+    padding: 10px;
+    border: 1px solid var(--grey);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.nested-popup-content p {
+    font-size: 10px;
+    margin-left: 10px;
+    color: var(--voilet1);
+}
+
+.pdf-upload-btn button {
+    padding: 7px 15px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgb(218, 217, 219);
+    background: linear-gradient(360deg, rgb(119, 119, 124) 0%, rgb(108, 108, 109) 100%);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    cursor: pointer;
+}
