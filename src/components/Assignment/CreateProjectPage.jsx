@@ -9,8 +9,9 @@ const CreateProjectPage = () => {
   const [studentcourse, SetStudentCourse] = useState('');
   // Navigation
   const navigate = useNavigate();
-  // Trainer Role
-  const [trainerRole, setTrainerRole] = useState(""); 
+  const [trainerRole, setTrainerRole] = useState("");
+  const [trainerName, setTrainerName] = useState("");
+  const [selectCourse, setSelectCourse] = useState("");
   // Cover Image
   const [coverImage, setCoverImage] = useState(null);
 
@@ -37,6 +38,17 @@ const CreateProjectPage = () => {
       setCoverImage(URL.createObjectURL(file));
     }
   };
+
+  const courses = [
+    "BIM Basic (ACS)",
+    "BIM Basic (MEP)",
+    "BIM Professional (ACS)",
+    "BIM Professional (MEP)",
+    "BIM Master (ACS)",
+    "BIM Master (MEP)",
+    "Interior Design",
+    "Digital Marketing"
+  ];
 
   return (
     // Main Section
@@ -97,21 +109,33 @@ const CreateProjectPage = () => {
         {/* Trainer Name */}
         <div className="create-batch-trainer-name">
           <label>Trainer Name :</label>
-          <input type="text" placeholder="Enter Trainer Name" required />
-        </div>
-        {/* Trainer Role */}
-        <div className="create-batch-trainer-role">
-          <label>Trainer Role :</label>
-          <select value={trainerRole} onChange={handleDropdownChange} required>
-            <option value="">Select Role</option>
-            <option value="yes">Sr. Trainer</option>
-            <option value="no">Jr. Trainer</option>
+          <select value={trainerName} onChange={(e) => setTrainerName(e.target.value)} required>
+            <option value="">Select Name</option>
+            <option value="Subbarao Attada">Subbarao Attada</option>
+            <option value="Mohammad Adnan">Mohammad Adnan</option>
+            <option value="Mohan Kanakala">Mohan Kanakala</option>
           </select>
         </div>
-        {/* Course Title */}
-        <div className="course-title">
+
+        <div className="create-batch-trainer-role">
+          <label>Trainer Role :</label>
+          <select value={trainerRole} onChange={(e) => setTrainerRole(e.target.value)} required>
+            <option value="">Select Role</option>
+            <option value="Sr. Trainer">Sr. Trainer</option>
+            <option value="Jr. Trainer">Jr. Trainer</option>
+          </select>
+        </div>
+
+        <div className="course-title course-title-dropdown" style={{ marginTop: "-10px" }}>
           <label>Course Title :</label>
-          <input type="text" placeholder="Enter Course Title" required />
+          <select value={selectCourse} onChange={(e) => setSelectCourse(e.target.value)} required>
+            <option value="">Select Course</option>
+            {courses.map((course, index) => (
+              <option key={index} value={course}>
+                {course}
+              </option>
+            ))}
+          </select>
         </div>
         {/* Project Topic */}
         <div className="course-category">

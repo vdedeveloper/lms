@@ -1,7 +1,45 @@
-import React from 'react'
-import './FeeStructure.css'
+import React, { useState } from 'react';
+import './FeeStructure.css';
+import { FaEdit } from 'react-icons/fa'; // Import edit icon
 
 const FeeStructure = () => {
+  // Select Role
+  const [selectrole, setSelectRole] = useState('');
+
+  // Fee Structure Details
+  const [feestructure, setFeeStructure] = useState([
+    { name: 'John Doe', course: 'BIM Basic (ACS)', fees: '30,000/-', paid: '15,000/-', pendingamount: '15,000/-', mode: 'Online', status: 'Pending' },
+    { name: 'Subbarao Attada', course: 'BIM Professional (MEP)', fees: '45,000/-', paid: '45,000/-', pendingamount: '0', mode: 'Cash', status: 'Completed' },
+    { name: 'Alex Johnson', course: 'BIM Master (ACS)', fees: '75,000/-', paid: '50,000/-', pendingamount: '25,000/-', mode: 'Online', status: 'Pending' },
+    { name: 'Mohammad Adnan', course: 'Interior Design', fees: '30,000/-', paid: '30,000/-', pendingamount: '0', mode: 'Bank Transfer', status: 'Completed' },
+    { name: 'Michael Brown', course: 'Digital Marketing', fees: '25,000/-', paid: '5,000/-', pendingamount: '20,000/-', mode: 'Online', status: 'Pending' },
+  ]);
+
+  // State for Modal
+  const [isEditing, setIsEditing] = useState(false);
+  const [currentEdit, setCurrentEdit] = useState(null);
+
+  // Open Modal
+  const handleEdit = (index) => {
+    setCurrentEdit({ ...feestructure[index], index });
+    setIsEditing(true);
+  };
+
+  // Handle Input Change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setCurrentEdit({ ...currentEdit, [name]: value });
+  };
+
+  // Save Changes
+  const handleSave = () => {
+    const updatedFeeStructure = [...feestructure];
+    updatedFeeStructure[currentEdit.index] = { ...currentEdit };
+    delete updatedFeeStructure[currentEdit.index].index;
+    setFeeStructure(updatedFeeStructure); // Correct function
+    setIsEditing(false);
+  };
+
   return (
     <div className="main-section">
       {/* Main Heading */}
@@ -12,108 +50,64 @@ const FeeStructure = () => {
         </div>
       </div>
 
-      {/* Fee Structure */}
-      <div className="fees-structure">
-        <div className="fees-structure-card">
-          {/* Student ID */}
-          <div className="student-id">
-            <h2>Student ID : <span>1</span></h2>
-          </div>
-          {/* Student Profile */}
-          <div className="student-profile">
-            <div className="trainer-profile-img">
-              <img src="/trainer-profile-img.jpg" alt="trainer-profile-img" />
-            </div>
-            <div className="student-profile-detail">
-              <h2>Jagriti Mishra</h2>
-              <h3>Online</h3>
-            </div>
-          </div>
-          {/* Student Profile Details */}
-          <div className="student-profile-details">
-            <div className="student-profile-course-detail">
-              <div className="student-profile-title">
-                {/* Course Heading */}
-                <div className="course-heading">
-                  <img src="/batch-course-icon.png" />
-                  <h2>Course :</h2>
-                </div>
-                {/* Course Name */}
-                <div className="student-profile-heading-content">
-                  <h2>BIM Basic <span>(ACS)</span></h2>
-                </div>
-              </div>
-              {/* Course Start Date */}
-              <div className="student-profile-start-date">
-                <div className="student-profile-date">
-                  <img src="/batch-calender-icon.png" />
-                  <h2>Start Date :</h2>
-                </div>
-                <div className="student-profile-start-date-content">
-                  <h2>16/12/2024</h2>
-                </div>
-              </div>
-              {/* Course End Date */}
-              <div className="student-profile-end-date">
-                <div className="student-profile-date">
-                  <img src="/batch-calender-icon.png" />
-                  <h2>End Date :</h2>
-                </div>
-                <div className="student-profile-end-date-content">
-                  <h2>30/12/2024</h2>
-                </div>
-              </div>
-              {/* Course Class Time */}
-              <div className="student-profile-class-time">
-                <div className="student-profile-date">
-                  <img src="/batch-time-icon.png" />
-                  <h2>Class Time :</h2>
-                </div>
-                <div className="student-profile-class-time-content">
-                  <h2>10:00 am <span>To</span> 12:00 pm</h2>
-                </div>
-              </div>
-            </div>
-            {/* Fee Details */}
-            <div className="student-profile-fees-detail">
-              {/* Fees Count */}
-              <div className="student-fees-title">
-                <div className="fees">
-                  <img src="/fees-icon.png" />
-                  <h2>Fees :</h2>
-                </div>
-                <div className="student-fees-content">
-                  <h2>34,000 <span>₹</span></h2>
-                </div>
-              </div>
-              {/* Pending Payment */}
-              <div className="student-payment-mode">
-                <div className="student-profile-date">
-                  <img src="/fees-icon.png" />
-                  <h2>Payment mode :</h2>
-                </div>
-                <div className="student-payment-mode-content">
-                  <h2>Partial / Installment</h2>
-                </div>
-              </div>
-              {/* Fee Status */}
-              <div className="student-profile-fee-status">
-                <div className="student-fees-status-content">
-                  <img src="/fees-icon.png" />
-                  <h2>Fee Status :</h2>
-                </div>
-                <div className="student-fee-status">
-                  <div className="progress-bar">
-                    <div className="progress-fill" style={{ width: "50%" }}></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      {/* Table Section */}
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Course</th>
+              <th>Fees</th>
+              <th>Fees Paid</th>
+              <th>Pending Amount</th>
+              <th>Mode</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {feestructure.map((feestructure, index) => (
+              <tr key={index} className={feestructure.status === 'Pending' ? 'active-row' : ''}>
+                <td>{feestructure.name}</td>
+                <td>{feestructure.course}</td>
+                <td>{feestructure.fees}</td>
+                <td>{feestructure.paid}</td>
+                <td>{feestructure.pendingamount}</td>
+                <td>{feestructure.mode}</td>
+                <td>{feestructure.status}</td>
+                <td>
+                  <FaEdit
+                    className="edit-icon"
+                    onClick={() => handleEdit(index)}
+                    title="Edit"
+                  />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Modal Section */}
+      {isEditing && (
+        <div className="modal">
+          <div className="modal-content">
+            <label>
+              Paid Fees:
+              <input
+                type="text"
+                name="paid"
+                value={currentEdit.paid}
+                onChange={handleChange}
+              />
+            </label>
+            <button onClick={handleSave} className="save-btn">Save</button>
+            <button onClick={() => setIsEditing(false)} className="cancel-btn">Cancel</button>
           </div>
         </div>
-      </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default FeeStructure
+export default FeeStructure;

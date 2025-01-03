@@ -213,16 +213,10 @@
 
 .learner-dashboard-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: start;
-    flex-direction: row;
+    flex-direction: column;
     gap: 30px;
-}
-
-/* Learner Top Left */
-
-.dashboard-left {
-    width: 70%;
 }
 
 /* Running Course Detail */
@@ -249,8 +243,8 @@
 .learner-dashboard .batches-counter-card,
 .learner-dashboard .students-counter-card,
 .learner-dashboard .trainers-counter-card {
-    width: 200px;
-    height: 130px;
+    width: 100%;
+    height: 150px;
     padding: 15px;
 }
 
@@ -321,13 +315,13 @@
 }
 
 .popular-course .course-card {
-    width: 260px;
+    width: 360px;
     background-color: var(--white);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 10px;
     position: relative;
-    min-height: 400px;
+    min-height: 520px;
 }
 
 .popular-course .course-card-img {
@@ -472,130 +466,15 @@
     cursor: pointer;
 }
 
-/* Learner Top Right */
-
-.dashboard-right {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-/* Running Batch Detail */
-
-.running-batch-detail .batch-card {
-    width: 100%;
-    padding: 20px;
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.running-batch-detail .batch-number h2 {
+.learner-dashboard .user-add-btn button{
+    padding: 10px 15px;
     font-size: 15px;
-    font-weight: 500;
-    color: var(--grey);
-    margin-bottom: 20px;
-}
-
-.running-batch-detail .batch-number span {
-    width: 30px;
-    height: 30px;
-    color: var(--white);
-    font-weight: 600;
-    background: rgb(188, 164, 255);
-    background: linear-gradient(180deg, rgba(188, 164, 255, 1) 0%, rgb(121, 73, 253) 100%);
-    padding: 5px 10px;
-    border-radius: 50px;
-    line-height: 0px;
-}
-
-.running-batch-detail .trainer-profile {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: row;
-    gap: 15px;
-}
-
-.running-batch-detail .trainer-profile-img img {
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-}
-
-.running-batch-detail .trainer-profile-detail {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.running-batch-detail .trainer-profile-detail h2 {
-    font-size: 23px;
-    font-weight: 500;
-    color: var(--black);
-}
-
-.running-batch-detail .trainer-profile-detail h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--voilet1);
-}
-
-.running-batch-detail .batch-course-title,
-.running-batch-detail .batch-enrolled-students,
-.running-batch-detail .batch-start-date,
-.running-batch-detail .batch-end-date,
-.running-batch-detail .batch-class-time,
-.running-batch-detail .course-heading,
-.running-batch-detail .enrolled-students,
-.running-batch-detail .start-date,
-.running-batch-detail .end-date,
-.running-batch-detail .class-time {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.running-batch-detail .course-heading img,
-.running-batch-detail .enrolled-students img,
-.running-batch-detail .start-date img,
-.running-batch-detail .end-date img,
-.running-batch-detail .class-time img {
-    width: 20px;
-    height: 20px;
-}
-
-.running-batch-detail .course-heading h2,
-.running-batch-detail .enrolled-students h2,
-.running-batch-detail .start-date h2,
-.running-batch-detail .end-date h2,
-.running-batch-detail .class-time h2 {
-    font-size: 15px;
-    color: var(--black);
-    font-weight: 500;
-}
-
-.running-batch-detail .course-heading-content h2,
-.running-batch-detail .enrolled-students-content h2,
-.running-batch-detail .start-date-content h2,
-.running-batch-detail .end-date-content h2,
-.running-batch-detail .class-time-content h2 {
-    font-size: 13px;
-    color: var(--grey);
-    font-weight: 500;
-    margin-top: 13px;
-}
+} 
 
 /* Active Assignments */
 
 .active-assignment {
     width: 100%;
-    margin-bottom: 60px;
 }
 
 .assignment-counter {
@@ -608,6 +487,7 @@
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
+    height: 140px;
 }
 
 .assignment-counter-img {
@@ -646,7 +526,6 @@
     align-items: center;
     flex-direction: row;
     gap: 30px;
-    margin: -20px 0;
 }
 
 /* Recent Video */

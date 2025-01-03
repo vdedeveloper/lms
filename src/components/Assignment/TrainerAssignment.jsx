@@ -8,6 +8,10 @@ const SubmitAssignment = () => {
         navigate("/create-assignment");
     };
 
+    const handleViewClick = () => {
+        navigate("/batchassignment");
+    };
+
     return (
         // Main Section
         <div className='main-section'>
@@ -27,17 +31,7 @@ const SubmitAssignment = () => {
                 <div className="batch-card">
                     {/* Assignment Number */}
                     <div className="batch-number">
-                        <h2>Student ID : <span>1</span></h2>
-                    </div>
-                    {/* Trainer Profile */}
-                    <div className="trainer-profile">
-                        <div className="trainer-profile-img">
-                            <img src="/trainer-profile-img.jpg" alt="trainer-profile-img" />
-                        </div>
-                        <div className="trainer-profile-detail">
-                            <h2>Jagriti Mishra</h2>
-                            <h3>Online</h3>
-                        </div>
+                        <h2>Batch No : <span>1</span></h2>
                     </div>
                     {/* Course Name */}
                     <div className="batch-course-title">
@@ -71,7 +65,7 @@ const SubmitAssignment = () => {
                     </div>
                     {/* Assignment View */}
                     <div className="start-class-btn">
-                        <button type="button" className="startclass-btn">
+                        <button type="button" className="startclass-btn" onClick={handleViewClick}>
                             View Assignment
                         </button>
                     </div>
@@ -80,17 +74,7 @@ const SubmitAssignment = () => {
                 <div className="batch-card">
                     {/* Assignment Number */}
                     <div className="batch-number">
-                        <h2>Student ID : <span>2</span></h2>
-                    </div>
-                    {/* Trainer Profile */}
-                    <div className="trainer-profile">
-                        <div className="trainer-profile-img">
-                            <img src="/trainer-profile-img.jpg" alt="trainer-profile-img" />
-                        </div>
-                        <div className="trainer-profile-detail">
-                            <h2>Jagriti Mishra</h2>
-                            <h3>Offline</h3>
-                        </div>
+                        <h2>Batch No : <span>2</span></h2>
                     </div>
                     {/* Course Name */}
                     <div className="batch-course-title">
@@ -124,7 +108,7 @@ const SubmitAssignment = () => {
                     </div>
                     {/* Assignment View */}
                     <div className="start-class-btn">
-                        <button type="button" className="startclass-btn">
+                        <button type="button" className="startclass-btn" onClick={handleViewClick}>
                             View Assignment
                         </button>
                     </div>
@@ -133,17 +117,7 @@ const SubmitAssignment = () => {
                 <div className="batch-card">
                     {/* Assignment Number */}
                     <div className="batch-number">
-                        <h2>Student ID : <span>3</span></h2>
-                    </div>
-                    {/* Trainer Profile */}
-                    <div className="trainer-profile">
-                        <div className="trainer-profile-img">
-                            <img src="/trainer-profile-img.jpg" alt="trainer-profile-img" />
-                        </div>
-                        <div className="trainer-profile-detail">
-                            <h2>Jagriti Mishra</h2>
-                            <h3>Online</h3>
-                        </div>
+                        <h2>Batch No : <span>3</span></h2>
                     </div>
                     {/* Course Name */}
                     <div className="batch-course-title">
@@ -177,7 +151,7 @@ const SubmitAssignment = () => {
                     </div>
                     {/* Assignment View */}
                     <div className="start-class-btn">
-                        <button type="button" className="startclass-btn">
+                        <button type="button" className="startclass-btn" onClick={handleViewClick}>
                             View Assignment
                         </button>
                     </div>

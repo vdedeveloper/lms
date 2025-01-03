@@ -5,11 +5,9 @@ import Login from "./components/Login/StudentLogin";
 import AdminLogin from "./components/Login/AdminLogin";
 import TrainerLogin from "./components/Login/TrainerLogin";
 import User from "./components/User/User";
-import AddLearner from "./components/User/AddLearner";
-import AddTrainer from "./components/User/AddTrainer";
 import Batch from "./components/Batch/Batch";
-import BatchPageLearner from "./components/Batch/BatchPageLearner";
-import Course from "./components/Course/Course";
+import LearnerCourse from "./components/Course/LearnerCourse";
+import AdminCourse from "./components/Course/AdminCourse";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import LearnerDashboard from "./components/Dashboard/LearnerDashboard";
 import SessionVideo from "./components/SessionVideo/SessionVideo";
@@ -26,13 +24,15 @@ import SupportLearner from "./components/Support/SupportLearner";
 import TrainerDashboard from "./components/Dashboard/TrainerDashboard";
 import Assignment from "./components/Assignment/Assignment";
 import CreateAssignmentPage from "./components/Assignment/CreateAssignmentPage";
-import AddAdmin from "./components/User/AddAdmin";
 import TrainerAssignment from "./components/Assignment/TrainerAssignment";
 import StudentAssignment from "./components/Assignment/StudentAssignment";
 import TrainerProject from "./components/Assignment/TrainerProject";
 import CreateProjectPage from "./components/Assignment/CreateProjectPage";
 import StudentProject from "./components/Assignment/StudentProject";
 import BatchPageTrainer from "./components/Batch/BatchPageTrainer";
+import LearnerFeeStructure from "./components/FeeStructure/LearnerFeeStructure";
+import BatchAssignment from "./components/Assignment/BatchAssignment";
+import BatchProject from "./components/Assignment/BatchProject";
 
 function App() {
   return (
@@ -88,40 +88,21 @@ function App() {
             </Layout>
           }
         />
-        {/* Add Admin */}
-        <Route
-          path="/addadmin"
-          element={
-            <Layout>
-              <AddAdmin />
-            </Layout>
-          }
-        />
-        {/* Add Learner */}
-        <Route
-          path="/addlearner"
-          element={
-            <Layout>
-              <AddLearner />
-            </Layout>
-          }
-        />
-        {/* Add Trainer */}
-        <Route
-          path="/addtrainer"
-          element={
-            <Layout>
-              <AddTrainer />
-            </Layout>
-          }
-        />
 
         {/* Course */}
         <Route
-          path="/course"
+          path="/learnercourse"
           element={
             <Layout>
-              <Course />
+              <LearnerCourse />
+            </Layout>
+          }
+        />
+        <Route
+          path="/admincourse"
+          element={
+            <Layout>
+              <AdminCourse />
             </Layout>
           }
         />
@@ -155,15 +136,6 @@ function App() {
             </Layout>
           }
         />
-        {/* Batch Page For Learner */}
-        <Route
-          path="/batch-page-learner"
-          element={
-            <Layout>
-              <BatchPageLearner />
-            </Layout>
-          }
-        />
         {/* Batch Page For Trainer */}
         <Route
           path="/batch-page-trainer"
@@ -182,7 +154,7 @@ function App() {
             </Layout>
           }
         />
-        
+
         {/* Study Material */}
 
         {/* Study Material Main */}
@@ -261,6 +233,22 @@ function App() {
             </Layout>
           }
         />
+        <Route
+          path="/batchassignment"
+          element={
+            <Layout>
+              <BatchAssignment />
+            </Layout>
+          }
+        />
+        <Route
+          path="/batchproject"
+          element={
+            <Layout>
+              <BatchProject />
+            </Layout>
+          }
+        />
         {/* Assignment Page For Student */}
         <Route
           path="/student-assignment"
@@ -316,6 +304,15 @@ function App() {
           element={
             <Layout>
               <FeeStructure />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/learnerfeestructure"
+          element={
+            <Layout>
+              <LearnerFeeStructure />
             </Layout>
           }
         />

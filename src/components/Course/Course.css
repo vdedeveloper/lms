@@ -1,4 +1,4 @@
-.usercontent-heading h3 {
+.create-batch-trainer-role .usercontent-heading h3 {
     font-size: 24px;
     color: var(--text-voilet);
 }
@@ -231,6 +231,8 @@
 .create-batch-number,
 .create-batch-trainer-name,
 .create-batch-trainer-role,
+.course-title-dropdown,
+.create-batch-study-material,
 .course-category,
 .create-batch-start-date,
 .create-batch-end-date,
@@ -254,7 +256,10 @@
 }
 
 .create-batch-content input,
-.create-batch-trainer-role select {
+.create-batch-trainer-role select,
+.create-batch-trainer-name select,
+.course-title-dropdown select,
+.create-batch-study-material select {
     padding: 20px;
     width: 100%;
     border: 1px solid #c3c1c1;
@@ -267,19 +272,25 @@
     color: #cbc8c8;
 }
 
-.create-batch-trainer-role :placeholder-shown {
-    color: #cbc8c8;
-}
-
 .create-batch-content input:hover,
-.create-batch-trainer-role select:hover {
+.create-batch-trainer-role select:hover,
+.create-batch-trainer-name select:hover,
+.course-title-dropdown select:hover,
+.create-batch-study-material select:hover,
+.custom-dropdown .dropdown-header:hover {
     border-color: var(--hover-violet);
 }
 
 .create-batch-content input:focus,
 .create-batch-trainer-role select:focus,
+.create-batch-trainer-name select:focus,
+.course-title-dropdown select:focus,
+.create-batch-study-material select:focus,
 .create-batch-content input:active,
-.create-batch-trainer-role select:active {
+.create-batch-trainer-role select:active,
+.create-batch-trainer-name select:active,
+.course-title-dropdown select:active,
+.create-batch-study-material select:active {
     border-color: var(--hover-violet);
     outline: none;
 }
@@ -293,32 +304,93 @@
     gap: 20px;
 }
 
-.student-select-option input[type="radio"] {
-    margin: 20px 0;
-}
-
-.student-selection {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    gap: 10px;
-    margin-top: 30px;
+/* Dropdown Styles */
+.custom-dropdown {
+    position: relative;
     width: 100%;
 }
 
-.student-selection h2 {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--text-voilet);
+.custom-dropdown .dropdown-header {
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #c3c1c1;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.custom-dropdown .dropdown-header span {
+    font-size: 15px;
+    color: #888;
+}
+
+.custom-dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #c3c1c1;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.custom-dropdown .dropdown-menu input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.custom-dropdown .dropdown-item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.custom-dropdown .dropdown-item label {
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+}
+
+.custom-dropdown .dropdown-item input {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    margin: 10px 10px 0 0;
+}
+
+.custom-dropdown .dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Batch Dates Section */
 .batch-dates {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     gap: 80px;
+}
+
+.batch-dates input {
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #c3c1c1;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 /* CreateCourse Page2 CSS */

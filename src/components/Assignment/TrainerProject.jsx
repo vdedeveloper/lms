@@ -8,6 +8,10 @@ const TrainerProject = () => {
         navigate("/create-project");
     };
 
+    const handleViewClick = () => {
+        navigate("/batchproject");
+    };
+
     return (
         // Main Section
         <div className='main-section'>
@@ -25,19 +29,9 @@ const TrainerProject = () => {
             <div className="batches">
                 {/* Project Card */}
                 <div className="batch-card">
-                    {/* Student ID Number */}
+                    {/* Batch No */}
                     <div className="batch-number">
-                        <h2>Student ID : <span>1</span></h2>
-                    </div>
-                    {/* Trainer Profile */}
-                    <div className="trainer-profile">
-                        <div className="trainer-profile-img">
-                            <img src="/trainer-profile-img.jpg" alt="trainer-profile-img" />
-                        </div>
-                        <div className="trainer-profile-detail">
-                            <h2>Jagriti Mishra</h2>
-                            <h3>Online</h3>
-                        </div>
+                        <h2>Batch No : <span>1</span></h2>
                     </div>
                     {/* Course Name */}
                     <div className="batch-course-title">
@@ -71,26 +65,16 @@ const TrainerProject = () => {
                     </div>
                     {/* Project View Button */}
                     <div className="start-class-btn">
-                        <button type="button" className="startclass-btn">
+                        <button type="button" className="startclass-btn" onClick={handleViewClick}>
                             View Project
                         </button>
                     </div>
                 </div>
                 {/* Project Card */}
                 <div className="batch-card">
-                    {/* Student ID Number */}
+                    {/* Batch No Number */}
                     <div className="batch-number">
-                        <h2>Student ID : <span>2</span></h2>
-                    </div>
-                    {/* Trainer Profile */}
-                    <div className="trainer-profile">
-                        <div className="trainer-profile-img">
-                            <img src="/trainer-profile-img.jpg" alt="trainer-profile-img" />
-                        </div>
-                        <div className="trainer-profile-detail">
-                            <h2>Jagriti Mishra</h2>
-                            <h3>Offline</h3>
-                        </div>
+                        <h2>Batch No : <span>2</span></h2>
                     </div>
                     {/* Course Name */}
                     <div className="batch-course-title">
@@ -124,26 +108,16 @@ const TrainerProject = () => {
                     </div>
                     {/* Project View Button */}
                     <div className="start-class-btn">
-                        <button type="button" className="startclass-btn">
+                        <button type="button" className="startclass-btn" onClick={handleViewClick}>
                             View Project
                         </button>
                     </div>
                 </div>
                 {/* Project Card */}
                 <div className="batch-card">
-                    {/* Student ID Number */}
+                    {/* Batch No Number */}
                     <div className="batch-number">
-                        <h2>Student ID : <span>3</span></h2>
-                    </div>
-                    {/* Trainer Profile */}
-                    <div className="trainer-profile">
-                        <div className="trainer-profile-img">
-                            <img src="/trainer-profile-img.jpg" alt="trainer-profile-img" />
-                        </div>
-                        <div className="trainer-profile-detail">
-                            <h2>Jagriti Mishra</h2>
-                            <h3>Online</h3>
-                        </div>
+                        <h2>Batch No : <span>3</span></h2>
                     </div>
                     {/* Course Name */}
                     <div className="batch-course-title">
@@ -177,7 +151,7 @@ const TrainerProject = () => {
                     </div>
                     {/* Project View Button */}
                     <div className="start-class-btn">
-                        <button type="button" className="startclass-btn">
+                        <button type="button" className="startclass-btn" onClick={handleViewClick}>
                             View Project
                         </button>
                     </div>

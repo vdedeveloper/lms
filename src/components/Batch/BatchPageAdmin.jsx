@@ -6,11 +6,6 @@ const BatchPageAdmin = () => {
   // Navigation
   const navigate = useNavigate();
 
-  // Create Course Navigation
-  const handleAddClick = () => {
-    navigate("/create-course");
-  };
-
   // Create Batch Navigation
   const handleAddBatchClick = () => {
     navigate("/create-batch");
@@ -33,9 +28,6 @@ const BatchPageAdmin = () => {
         <div className="batch-page-btn">
           <div className="user-add-btn addcourse">
             <button onClick={handleAddBatchClick}>Create Batch +</button>
-          </div>
-          <div className="user-add-btn addcourse">
-            <button onClick={handleAddClick}>Create Course +</button>
           </div>
         </div>
       </div>

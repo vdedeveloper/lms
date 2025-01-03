@@ -9,15 +9,14 @@
 
 table {
     width: 100%;
-    border-collapse: separate; 
-    border-spacing: 0 10px; 
-    font-size: 14px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
 }
 
-thead th {
-    font-size: 22px;
+table thead th {
+    font-size: 17px !important;
     color: var(--grey);
-    font-weight: 400;
+    font-weight: 500;
     padding: 12px 15px;
     text-align: left;
     border-bottom: 1px solid var(--grey2);
@@ -39,11 +38,72 @@ tbody tr:hover {
 td {
     padding: 12px 15px;
     color: #333;
+    font-size: 14px;
 }
 
 .active-row {
     background-color: #e6dcf9;
 }
+
+.highlight-super-admin {
+    background-color: #f8f9dc;
+}
+
+/* Filter Bar Section */
+.filter-bar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.filter-bar input {
+    width: 500px;
+    padding: 8px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.filter-bar input:focus {
+    border-color: #670AC4;
+}
+
+.filter-bar input::placeholder {
+    color: #999;
+}
+
+/* Optional styling for the filter icon (if you use one) */
+.filter-bar .filter-icon {
+    margin: 0 10px;
+    font-size: 18px;
+    color: #670AC4;
+    cursor: pointer;
+}
+
+.filter-bar .filter-icon:hover {
+    color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-bar input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
 
 /* Popup Styles */
 
@@ -65,7 +125,7 @@ td {
 .popup {
     background: #ffffff;
     width: 500px;
-    height: 500px; 
+    height: 500px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -74,7 +134,7 @@ td {
 }
 
 .popup-header {
-    position: relative; 
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,9 +166,9 @@ td {
 }
 
 .close-button {
-    position: absolute; 
-    top: 10px; 
-    right: 10px; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
     background: none;
     border: none;
     font-size: 30px;
@@ -125,8 +185,8 @@ td {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; 
-    overflow-y: auto; 
+    flex-grow: 1;
+    overflow-y: auto;
     max-height: calc(500px - 80px);
 }
 
@@ -144,7 +204,19 @@ td {
 
 .form-group input[type="text"],
 .form-group input[type="email"],
-.form-group input[type="tel"] {
+.form-group input[type="tel"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.form-group select:hover,
+.form-group select:focus,
+.form-group select:active {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;

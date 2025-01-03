@@ -25,7 +25,7 @@ const Sidebar = ({ onSelect }) => {
     // Dropdown Click
     const handleDropdownClick = (route) => {
         navigate(route);
-        onSelect(route); 
+        onSelect(route);
     };
 
     const isActive = (path) => location.pathname === path;
@@ -69,50 +69,15 @@ const Sidebar = ({ onSelect }) => {
                 </div> */}
 
                 {/* Users (Admin) */}
-                <div
-                    className={`menu-item ${isActive('/user') ? 'active' : ''}`}
-                    onClick={toggleUsersDropdown}
-                >
+                <div className={`menu-item ${isActive('/user') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
                     <div className="icon">
-                        <img src="/users-icon.png" alt="Users Icon" />
+                        <img src="/users-icon.png" alt="Course Icon" />
                     </div>
                     <NavLink to="/user" className="link">
-                        USERS
+                        <span>USERS</span>
                     </NavLink>
-                    <span className="arrow-icon">{isUsersDropdownOpen ? '▲' : '▼'}</span>
                 </div>
-                {isUsersDropdownOpen && (
-                    <div className="dropdown">
-                        <div
-                            className="dropdown-item"
-                            onClick={() => handleDropdownClick('/addadmin')}
-                        >
-                            <div className="icon">
-                                <img src="/admin-user.png" alt="Admin Icon" />
-                            </div>
-                            ADD ADMIN
-                        </div>
-                        <div
-                            className="dropdown-item"
-                            onClick={() => handleDropdownClick('/addlearner')}
-                        >
-                            <div className="icon">
-                                <img src="/learner-user.png" alt="Learner Icon" />
-                            </div>
-                            ADD LEARNER
-                        </div>
-                        <div
-                            className="dropdown-item"
-                            onClick={() => handleDropdownClick('/addtrainer')}
-                        >
-                            <div className="icon">
-                                <img src="/trainer-user.png" alt="Trainer Icon" />
-                            </div>
-                            ADD TRAINER
-                        </div>
-                    </div>
-                )}
 
                 {/* Batches */}
                 {/* Batches (admin) */}
@@ -126,17 +91,6 @@ const Sidebar = ({ onSelect }) => {
                     </NavLink>
                 </div>
 
-                {/* Batches (Learner) */}
-                {/* <div className={`menu-item ${isActive('/batch-page-learner') ? 'active' : ''}`}>
-                    <div className="icon-strip"></div>
-                    <div className="icon">
-                        <img src="/batches-icon.png" alt="Course Icon" />
-                    </div>
-                    <NavLink to="/batch-page-learner" className="link">
-                        <span>BATCHES</span>
-                    </NavLink>
-                </div> */}
-
                 {/* Batches (Trainer) */}
                 {/* <div className={`menu-item ${isActive('/batch-page-trainer') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
@@ -148,18 +102,29 @@ const Sidebar = ({ onSelect }) => {
                     </NavLink>
                 </div> */}
 
-                {/* Courses (learner) */}
-                {/* <div className={`menu-item ${isActive('/course') ? 'active' : ''}`}>
+                {/* Courses (admin) */}
+                <div className={`menu-item ${isActive('/admincourse') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
                     <div className="icon">
                         <img src="/course-icon.png" alt="Course Icon" />
                     </div>
-                    <NavLink to="/course" className="link">
+                    <NavLink to="/admincourse" className="link">
                         <span>COURSE</span>
+                    </NavLink>
+                </div>
+
+                {/* Courses (learner) */}
+                {/* <div className={`menu-item ${isActive('/learnercourse') ? 'active' : ''}`}>
+                    <div className="icon-strip"></div>
+                    <div className="icon">
+                        <img src="/course-icon.png" alt="Course Icon" />
+                    </div>
+                    <NavLink to="/learnercourse" className="link">
+                        <span>MY COURSE</span>
                     </NavLink>
                 </div> */}
 
-                {/* Session Video (Trainer, learner) */}
+                {/* Session Video (learner) */}
                 {/* <div className={`menu-item ${isActive('/sessionvideo') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
                     <div className="icon">
@@ -232,15 +197,25 @@ const Sidebar = ({ onSelect }) => {
                     </div>
                 )} */}
 
-
-                {/* Fee Structure (Learner) */}
-                {/* <div className={`menu-item ${isActive('/feestructure') ? 'active' : ''}`}>
+                {/* Fee Structure (Admin) */}
+                <div className={`menu-item ${isActive('/feestructure') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
                     <div className="icon">
                         <img src="/fee-icon.png" alt="Fee Icon" />
                     </div>
                     <NavLink to="/feestructure" className="link">
-                        <span>FEE STRUCTURE</span>
+                        <span>FEE DETAILS</span>
+                    </NavLink>
+                </div>
+
+                {/* Fee Structure (Learner) */}
+                {/* <div className={`menu-item ${isActive('/learnerfeestructure') ? 'active' : ''}`}>
+                    <div className="icon-strip"></div>
+                    <div className="icon">
+                        <img src="/fee-icon.png" alt="Fee Icon" />
+                    </div>
+                    <NavLink to="/learnerfeestructure" className="link">
+                        <span>FEE DETAILS</span>
                     </NavLink>
                 </div> */}
 
