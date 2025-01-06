@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { FaEdit, FaEye } from 'react-icons/fa'; // Import edit icon
+import { FaEdit, FaDownload } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpload } from '@fortawesome/free-solid-svg-icons';
 
 const BatchAssignment = () => {
   // Select Role
@@ -18,6 +20,9 @@ const BatchAssignment = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [currentEdit, setCurrentEdit] = useState(null);
 
+  // File Upload State
+  const [uploadedFiles, setUploadedFiles] = useState({ file: null });
+
   // Open Modal
   const handleEdit = (index) => {
     setCurrentEdit({ ...support[index], index });
@@ -30,6 +35,12 @@ const BatchAssignment = () => {
     setCurrentEdit({ ...currentEdit, [name]: value });
   };
 
+  // Handle File Upload
+  const handleFileUpload = (name, event) => {
+    const file = event.target.files[0];
+    setUploadedFiles({ [name]: file });
+  };
+
   // Save Changes
   const handleSave = () => {
     const updatedSupport = [...support];
@@ -37,6 +48,11 @@ const BatchAssignment = () => {
     delete updatedSupport[currentEdit.index].index;
     setSupport(updatedSupport);
     setIsEditing(false);
+  };
+
+  // Popup Function
+  const openPopup = () => {
+    alert('File uploaded successfully!');
   };
 
   return (
@@ -64,23 +80,16 @@ const BatchAssignment = () => {
           </thead>
           <tbody>
             {support.map((learner, index) => (
-              <tr key={index} className={learner.status === 'No' ? 'active-row' : ''}>
+              <tr key={learner.name} className={learner.status === 'No' ? 'active-row' : ''}>
                 <td>{learner.name}</td>
                 <td>{learner.topic}</td>
                 <td>{learner.status}</td>
                 <td>
-                  <FaEye
-                    className="edit-icon"
-                    title="View"
-                  />
+                  <FaDownload className="edit-icon" title="View" />
                 </td>
                 <td>{learner.remark}</td>
                 <td>
-                  <FaEdit
-                    className="edit-icon"
-                    onClick={() => handleEdit(index)}
-                    title="Edit"
-                  />
+                  <FaEdit className="edit-icon" onClick={() => handleEdit(index)} title="Edit" />
                 </td>
               </tr>
             ))}
@@ -89,7 +98,7 @@ const BatchAssignment = () => {
       </div>
 
       {/* Modal Section */}
-      {isEditing && (
+      {isEditing && currentEdit && (
         <div className="modal">
           <div className="modal-content">
             <label>
@@ -97,9 +106,14 @@ const BatchAssignment = () => {
               <input
                 type="text"
                 name="remark"
-                value={currentEdit.remark}
+                value={currentEdit?.remark || ''}
                 onChange={handleChange}
               />
+            </label>
+            <label>
+              Uploaded File:
+              <input type="file" onChange={(e) => handleFileUpload('file', e)} style={{border: "1px solid #000", padding: "10px", borderRadius: "5px"}} />
+              {uploadedFiles.file && <p>Uploaded File: {uploadedFiles.file.name}</p>}
             </label>
             <button onClick={handleSave}>Save</button>
             <button onClick={() => setIsEditing(false)}>Cancel</button>

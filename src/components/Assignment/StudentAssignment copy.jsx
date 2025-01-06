@@ -1,45 +1,25 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes, faUpload } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
 const StudentAssignment = () => {
-    // State to manage popup visibility
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-    // State to manage uploaded file
-    const [uploadedFile, setUploadedFile] = useState(null);
-
-    // Function to open popup
-    const openPopup = () => {
-        setIsPopupOpen(true);
-    };
-
-    // Function to close popup
-    const closePopup = () => {
-        setIsPopupOpen(false);
-    };
-
-    // Function to handle file upload
-    const handleFileUpload = (e) => {
-        setUploadedFile(e.target.files[0]);
-    };
-
     return (
-        <div className="main-section">
+        // Main Section
+        <div className='main-section'>
             {/* Main Heading */}
-            <div className="main-heading">
-                <div className="usercontent-heading">
+            <div className='main-heading'>
+                <div className='usercontent-heading'>
                     <h3>Assignment</h3>
                     <p>Complete all assignments and submit to your trainer</p>
                 </div>
             </div>
-
             {/* Assignment Card */}
             <div className="batches">
+                {/* Assignment Card */}
                 <div className="batch-card">
+                    {/* Assignment Number */}
                     <div className="batch-number">
                         <h2>Assignment No : <span>1</span></h2>
                     </div>
+                    {/* Trainer Profile */}
                     <div className="trainer-profile">
                         <div className="trainer-profile-img">
                             <img src="/trainer-profile-img.jpg" alt="trainer-profile-img" />
@@ -49,52 +29,60 @@ const StudentAssignment = () => {
                             <h3>Sr. Trainer</h3>
                         </div>
                     </div>
+                    {/* Course Name */}
                     <div className="batch-course-title">
                         <div className="course-heading">
-                            <img src="/batch-course-icon.png" alt="course-icon" />
+                            <img src="/batch-course-icon.png" />
                             <h2>Course :</h2>
                         </div>
                         <div className="course-heading-content">
                             <h2>BIM Basic <span>(ACS)</span></h2>
                         </div>
                     </div>
+                    {/* Assignment Title */}
                     <div className="batch-enrolled-students">
                         <div className="enrolled-students">
-                            <img src="/batch-student-icon.png" alt="student-icon" />
+                            <img src="/batch-student-icon.png" />
                             <h2>Assignment :</h2>
                         </div>
                         <div className="enrolled-students-content">
-                            <h2>Create a Wall</h2>
+                            <h2>create a wall</h2>
                         </div>
                     </div>
+                    {/* Assignment Start Date */}
                     <div className="batch-start-date">
                         <div className="start-date">
-                            <img src="/batch-calender-icon.png" alt="calendar-icon" />
+                            <img src="/batch-calender-icon.png" />
                             <h2>Start Date :</h2>
                         </div>
                         <div className="start-date-content">
                             <h2>16/12/2024</h2>
                         </div>
                     </div>
+                    {/* Assignment End Date */}
                     <div className="batch-end-date">
                         <div className="end-date">
-                            <img src="/batch-calender-icon.png" alt="calendar-icon" />
+                            <img src="/batch-calender-icon.png" />
                             <h2>End Date :</h2>
                         </div>
                         <div className="end-date-content">
                             <h2>30/12/2024</h2>
                         </div>
                     </div>
+                    {/* Assignment Submit */}
                     <div className="start-class-btn">
-                        <button type="button" className="startclass-btn" onClick={openPopup}>
+                        <button type="button" className="startclass-btn">
                             Submit
                         </button>
                     </div>
                 </div>
+                {/* Assignment Card */}
                 <div className="batch-card">
+                    {/* Assignment Number */}
                     <div className="batch-number">
-                        <h2>Assignment No : <span>1</span></h2>
+                        <h2>Assignment No : <span>2</span></h2>
                     </div>
+                    {/* Trainer Profile */}
                     <div className="trainer-profile">
                         <div className="trainer-profile-img">
                             <img src="/trainer-profile-img.jpg" alt="trainer-profile-img" />
@@ -104,52 +92,60 @@ const StudentAssignment = () => {
                             <h3>Sr. Trainer</h3>
                         </div>
                     </div>
+                    {/* Course Name */}
                     <div className="batch-course-title">
                         <div className="course-heading">
-                            <img src="/batch-course-icon.png" alt="course-icon" />
+                            <img src="/batch-course-icon.png" />
                             <h2>Course :</h2>
                         </div>
                         <div className="course-heading-content">
                             <h2>BIM Basic <span>(ACS)</span></h2>
                         </div>
                     </div>
+                    {/* Assignment Title */}
                     <div className="batch-enrolled-students">
                         <div className="enrolled-students">
-                            <img src="/batch-student-icon.png" alt="student-icon" />
+                            <img src="/batch-student-icon.png" />
                             <h2>Assignment :</h2>
                         </div>
                         <div className="enrolled-students-content">
-                            <h2>Create a Wall</h2>
+                            <h2>create a wall</h2>
                         </div>
                     </div>
+                    {/* Assignment Start Date */}
                     <div className="batch-start-date">
                         <div className="start-date">
-                            <img src="/batch-calender-icon.png" alt="calendar-icon" />
+                            <img src="/batch-calender-icon.png" />
                             <h2>Start Date :</h2>
                         </div>
                         <div className="start-date-content">
                             <h2>16/12/2024</h2>
                         </div>
                     </div>
+                    {/* Assignment End Date */}
                     <div className="batch-end-date">
                         <div className="end-date">
-                            <img src="/batch-calender-icon.png" alt="calendar-icon" />
+                            <img src="/batch-calender-icon.png" />
                             <h2>End Date :</h2>
                         </div>
                         <div className="end-date-content">
                             <h2>30/12/2024</h2>
                         </div>
                     </div>
+                    {/* Assignment Submit Button */}
                     <div className="start-class-btn">
-                        <button type="button" className="startclass-btn" onClick={openPopup}>
+                        <button type="button" className="startclass-btn">
                             Submit
                         </button>
                     </div>
                 </div>
+                {/* Assignment Card */}
                 <div className="batch-card">
+                    {/* Assignment Number */}
                     <div className="batch-number">
-                        <h2>Assignment No : <span>1</span></h2>
+                        <h2>Assignment No : <span>3</span></h2>
                     </div>
+                    {/* Trainer Profile */}
                     <div className="trainer-profile">
                         <div className="trainer-profile-img">
                             <img src="/trainer-profile-img.jpg" alt="trainer-profile-img" />
@@ -159,75 +155,56 @@ const StudentAssignment = () => {
                             <h3>Sr. Trainer</h3>
                         </div>
                     </div>
+                    {/* Course Name */}
                     <div className="batch-course-title">
                         <div className="course-heading">
-                            <img src="/batch-course-icon.png" alt="course-icon" />
+                            <img src="/batch-course-icon.png" />
                             <h2>Course :</h2>
                         </div>
                         <div className="course-heading-content">
                             <h2>BIM Basic <span>(ACS)</span></h2>
                         </div>
                     </div>
+                    {/* Assignment Title */}
                     <div className="batch-enrolled-students">
                         <div className="enrolled-students">
-                            <img src="/batch-student-icon.png" alt="student-icon" />
+                            <img src="/batch-student-icon.png" />
                             <h2>Assignment :</h2>
                         </div>
                         <div className="enrolled-students-content">
-                            <h2>Create a Wall</h2>
+                            <h2>create a wall</h2>
                         </div>
                     </div>
+                    {/* Assignment Start Date */}
                     <div className="batch-start-date">
                         <div className="start-date">
-                            <img src="/batch-calender-icon.png" alt="calendar-icon" />
+                            <img src="/batch-calender-icon.png" />
                             <h2>Start Date :</h2>
                         </div>
                         <div className="start-date-content">
                             <h2>16/12/2024</h2>
                         </div>
                     </div>
+                    {/* Assignment End Date */}
                     <div className="batch-end-date">
                         <div className="end-date">
-                            <img src="/batch-calender-icon.png" alt="calendar-icon" />
+                            <img src="/batch-calender-icon.png" />
                             <h2>End Date :</h2>
                         </div>
                         <div className="end-date-content">
                             <h2>30/12/2024</h2>
                         </div>
                     </div>
+                    {/* Assignment Submit */}
                     <div className="start-class-btn">
-                        <button type="button" className="startclass-btn" onClick={openPopup}>
+                        <button type="button" className="startclass-btn">
                             Submit
                         </button>
                     </div>
                 </div>
             </div>
-
-            {/* Popup Modal */}
-            {isPopupOpen && (
-                <div className="nested-popup-overlay">
-                    <div className="nested-popup-content">
-                        <div className="nested-popup-heading">
-                            <h2>Upload Any File</h2>
-                            <button className="close-icon" onClick={closePopup} style={{ background: "none", border: "none", outline: "none" }}>
-                                <FontAwesomeIcon icon={faTimes} style={{ marginTop: "20px" }} />
-                            </button>
-                        </div>
-                        <div className="nested-popup-body" style={{ marginTop: "20px" }}>
-                            <input type="file" onChange={handleFileUpload} />
-                            {uploadedFile && <p>Uploaded File: {uploadedFile.name}</p>}
-                        </div>
-                        <div className="pdf-upload-btn">
-                            <button type="button" className="addmanual-btn">
-                                <FontAwesomeIcon icon={faUpload} style={{ width: '20px', marginRight: '10px' }} />
-                                Upload
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            )}
         </div>
     );
-};
+}
 
-export default StudentAssignment;
+export default StudentAssignment

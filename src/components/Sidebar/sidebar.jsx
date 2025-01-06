@@ -159,7 +159,7 @@ const Sidebar = ({ onSelect }) => {
                     </NavLink>
                 </div> */}
 
-                {/* Assignment (Learner, Trainer) */}
+                {/* Assignment (Trainer) */}
 
                 {/* <div
                     className={`menu-item ${isActive('/assignment') ? 'active' : ''}`}
@@ -188,6 +188,44 @@ const Sidebar = ({ onSelect }) => {
                         <div
                             className="dropdown-item"
                             onClick={() => handleDropdownClick('/trainer-project')}
+                        >
+                            <div className="icon">
+                                <img src="/project-submit.png" alt="Admin Icon" />
+                            </div>
+                            PROJECTS
+                        </div>
+                    </div>
+                )} */}
+
+                {/* Assignment (Learner) */}
+
+                {/* <div
+                    className={`menu-item ${isActive('/student-assignment') ? 'active' : ''}`}
+                    onClick={toggleAssignmentDropdown}
+                >
+                    <div className="icon-strip"></div>
+                    <div className="icon">
+                        <img src="/submission-icon.png" alt="Users Icon" />
+                    </div>
+                    <NavLink to="/student-assignment" className="link">
+                        ASSIGNMENT
+                    </NavLink>
+                    <span className="arrow-icon">{isAssignmentDropdownOpen ? '▲' : '▼'}</span>
+                </div> */}
+                {/* {isAssignmentDropdownOpen && (
+                    <div className="dropdown">
+                        <div
+                            className="dropdown-item"
+                            onClick={() => handleDropdownClick('/student-assignment')}
+                        >
+                            <div className="icon">
+                                <img src="/assignment-submit.png" alt="Admin Icon" />
+                            </div>
+                            ASSIGNMENTS
+                        </div>
+                        <div
+                            className="dropdown-item"
+                            onClick={() => handleDropdownClick('/student-project')}
                         >
                             <div className="icon">
                                 <img src="/project-submit.png" alt="Admin Icon" />
