@@ -45,8 +45,8 @@ const FeeStructure = () => {
       {/* Main Heading */}
       <div className="main-heading">
         <div className="usercontent-heading">
-          <h3>Fee Structure</h3>
-          <p>Here is your fee structure</p>
+          <h3>Fee Details</h3>
+          <p>Here is your fee details</p>
         </div>
       </div>
 

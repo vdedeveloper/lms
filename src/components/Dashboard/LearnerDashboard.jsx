@@ -138,7 +138,7 @@ const LearnerDashboard = () => {
                     <h2>Pending <span>30%</span></h2>
                   </div>
                 </div>
-                <div className="user-add-btn" style={{marginTop:"20px"}}>
+                <div className="user-add-btn join-class" style={{marginTop:"20px"}}>
                   <button type="button">
                     Join Class
                   </button>

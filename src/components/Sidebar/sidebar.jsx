@@ -257,24 +257,13 @@ const Sidebar = ({ onSelect }) => {
                     </NavLink>
                 </div> */}
 
-                {/* Support (admin) */}
-                <div className={`menu-item ${isActive('/support') ? 'active' : ''}`}>
+                {/* Support (Learner, Trainer) */}
+                {/* <div className={`menu-item ${isActive('/support') ? 'active' : ''}`}>
                     <div className="icon-strip"></div>
                     <div className="icon">
                         <img src="/support-icon.png" alt="Support Icon" />
                     </div>
                     <NavLink to="/support" className="link">
-                        <span>ISSUES</span>
-                    </NavLink>
-                </div>
-
-                {/* Support (Learner, Trainer) */}
-                {/* <div className={`menu-item ${isActive('/support-learner') ? 'active' : ''}`}>
-                    <div className="icon-strip"></div>
-                    <div className="icon">
-                        <img src="/support-icon.png" alt="Support Icon" />
-                    </div>
-                    <NavLink to="/support-learner" className="link">
                         <span>SUPPORT</span>
                     </NavLink>
                 </div> */}

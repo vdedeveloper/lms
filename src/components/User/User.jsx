@@ -112,7 +112,7 @@ const User = () => {
                             <th>Role</th>
                             <th>Course</th>
                             <th>Mode</th>
-                            <th>Fee Detail</th>
+                            <th>Fees</th>
                         </tr>
                     </thead>
                     <tbody>

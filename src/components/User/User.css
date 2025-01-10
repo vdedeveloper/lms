@@ -266,3 +266,15 @@ td {
 .select-role input[type="radio"] {
     margin-right: 5px;
 }
+
+
+@media (max-width: 1200px) {
+    table thead th {
+        font-size: 14px !important;
+        padding: 12px;
+    }
+    td {
+        padding: 12px;
+        font-size: 12px;
+    }
+}

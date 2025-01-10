@@ -20,7 +20,6 @@ import CreateCoursePage2 from "./components/Course/CreateCoursePage2";
 import CreateBatchPage from "./components/Batch/CreateBatchPage";
 import MaterialPage from "./components/Materials/MaterialPage";
 import Layout from "./components/Layout/Layout";
-import SupportLearner from "./components/Support/SupportLearner";
 import TrainerDashboard from "./components/Dashboard/TrainerDashboard";
 import Assignment from "./components/Assignment/Assignment";
 import CreateAssignmentPage from "./components/Assignment/CreateAssignmentPage";
@@ -285,15 +284,6 @@ function App() {
           element={
             <Layout>
               <Support />
-            </Layout>
-          }
-        />
-        {/* Support Page For Learner */}
-        <Route
-          path="/support-learner"
-          element={
-            <Layout>
-              <SupportLearner />
             </Layout>
           }
         />

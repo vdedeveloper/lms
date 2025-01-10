@@ -157,3 +157,25 @@
         font-size: 13px;
     }
 }
+
+@media (max-width: 1200px){
+    .learner-dashboard .user-add-btn button{
+        padding: 8px;
+        font-size: 12px;
+        margin-top: 0;
+    } 
+
+    .popular-course .course-card {
+        width: 220px;
+        min-height: 400px;
+    }
+
+    .mock-test-counter-content h3, .download-certificate-content h3  {
+        font-size: 11px;
+    }
+
+    .mock-test-btn button, .download-certificate-btn button, .assignment-btn button {
+        font-size: 12px;
+        margin-top: 15px;
+    }
+}

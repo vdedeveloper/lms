@@ -12,6 +12,7 @@ const CreateAssignmentPage = () => {
   const [trainerRole, setTrainerRole] = useState("");
   const [trainerName, setTrainerName] = useState("");
   const [selectCourse, setSelectCourse] = useState("");
+  const [selectbatch, SetSelectBatch] = useState('');
   // Cover Image
   const [coverImage, setCoverImage] = useState(null);
 
@@ -48,6 +49,17 @@ const CreateAssignmentPage = () => {
     "BIM Master (MEP)",
     "Interior Design",
     "Digital Marketing"
+  ];
+
+  const batches = [
+    "Batch 1",
+    "Batch 2",
+    "Batch 3",
+    "Batch 4",
+    "Batch 5",
+    "Batch 6",
+    "Batch 7",
+    "Batch 8"
   ];
 
   return (
@@ -130,6 +142,17 @@ const CreateAssignmentPage = () => {
             {courses.map((course, index) => (
               <option key={index} value={course}>
                 {course}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="course-title course-title-dropdown" style={{ marginTop: "-10px" }}>
+          <label>Batch :</label>
+          <select value={selectbatch} onChange={(e) => SetSelectBatch(e.target.value)} required>
+            <option value="">Select batch</option>
+            {batches.map((batch, index) => (
+              <option key={index} value={batch}>
+                {batch}
               </option>
             ))}
           </select>
